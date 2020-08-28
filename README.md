@@ -1,2 +1,2 @@
 # react
-react some practice projects
+react awaresome projects
