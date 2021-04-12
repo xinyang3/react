@@ -1,3 +1,10 @@
+/*
+ * @Author: xinyang3
+ * @Date: 2020-10-30 11:04
+ * @Descripttion: awesome description
+ * @LastEditors: xinyang3
+ * @LastEditTime: 2021-02-22 11:43
+ */
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import PostList from './PostList';
@@ -33,14 +40,16 @@ class Home extends Component {
           username={username}
           onLogout={this.handleLogout}
           location={location}
-        />
+        />{' '}
         <Route
           path={match.url}
           exact
           render={(props) => (
-            <PostList username={username} userId={userId} {...props}></PostList>
+            <PostList username={username} userId={userId} {...props}>
+              {' '}
+            </PostList>
           )}
-        />
+        />{' '}
         <Route
           path={`${match.url}/:id`}
           render={(props) => <Post userId={userId} {...props} />}
