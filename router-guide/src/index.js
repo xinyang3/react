@@ -1,0 +1,26 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import { BrowserRouter as Router, HashRouter } from 'react-router-dom';
+// import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+// import BasicRouting from './routers/basic-routing';
+// import NestedRouting from './routers/nested-routing';
+import App from './components/app';
+
+ReactDOM.render(
+  <HashRouter>
+    <React.StrictMode>
+      {/* <NestedRouting /> */}
+      {/* <BasicRouting /> */}
+      <App />
+    </React.StrictMode>
+  </HashRouter>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
