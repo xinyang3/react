@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
   Redirect,
+  Link,
 } from 'react-router-dom'
 
 import { Navbar } from './app/Navbar'
@@ -26,11 +27,17 @@ function App() {
               //   <h2>Welcome to the Redux Essentials example app!</h2>
               // </section>
               <React.Fragment>
-                <AddPostForm />
+                {/* <AddPostForm /> */}
+                <section>
+                  <Link to="/addPost" className="button btn-add">
+                    Add Post
+                  </Link>
+                </section>
                 <PostsList />
               </React.Fragment>
             )}
           />
+          <Route exact path="/addPost" component={AddPostForm} />
           <Route exact path="/posts/:postId" component={SinglePostPage} />
           <Route exact path="/editPost/:postId" component={EditPostForm} />
           <Redirect to="/" />
