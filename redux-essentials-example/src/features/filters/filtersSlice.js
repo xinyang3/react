@@ -3,7 +3,7 @@
  * @Date: 2021-04-16 15:54
  * @Descripttion: awesome description
  * @LastEditors: xinyang3
- * @LastEditTime: 2021-04-22 18:05
+ * @LastEditTime: 2021-04-23 11:16
  */
 export const StatusFilters = {
   All: 'all',
@@ -26,8 +26,13 @@ function filtersReducer(state = initState, action) {
       };
     }
     case 'filters/colorFilterChanged': {
-      let { color, changeType } = action.payload;
-      const { colors } = state;
+      let {
+        color,
+        changeType
+      } = action.payload;
+      const {
+        colors
+      } = state;
 
       switch (changeType) {
         case 'added': {
